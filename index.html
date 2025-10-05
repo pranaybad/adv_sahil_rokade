@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Adv. Sahil Rokade | Advocate in Mumbai</title>
+    <meta name="description" content="Advocate Sahil Rokade — Professional Legal Services in Mumbai for Civil, Criminal, and Corporate Cases." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+         :root {
+            --accent: #d4af37;
+            --accent-dark: #b8941f;
+            --dark: #0a0e17;
+            --darker: #060911;
+            --muted: #94a3b8;
+            --light: #e2e8f0;
+            --glass: rgba(255, 255, 255, 0.03);
+            --card: rgba(15, 20, 30, 0.6);
+            --border: rgba(212, 175, 55, 0.15);
+            --radius: 16px;
+            --max: 1200px;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background: var(--darker);
+            color: var(--light);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        
+        .bg-pattern {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.08) 0%, transparent 50%), radial-gradient(circle at 80% 70%, rgba(59, 130, 246, 0.06) 0%, transparent 50%), linear-gradient(180deg, #0a0e17 0%, #060911 100%);
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .container {
+            max-width: var(--max);
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+        /* Header */
+        
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(6, 9, 17, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        header.scrolled {
+            background: rgba(6, 9, 17, 0.95);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 0;
+        }
+        
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        
+        .logo {
+            position: relative;
+        }
+        
+        .logo::before {
+            content: '';
+            position: absolute;
+            inset: -3px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent), #3b82f6);
+            opacity: 0.5;
+            filter: blur(8px);
+            animation: pulse 3s ease-in-out infinite;
+        }
+        
+        .logo img {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            border: 2px solid var(--accent);
+            position: relative;
+            display: block;
+        }
+        
+        .brand-text h1 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--light);
+            margin-bottom: 2px;
+        }
+        
+        .brand-text p {
+            font-size: 13px;
+            color: var(--muted);
+            font-weight: 500;
+        }
+        
+        nav {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+        
+        nav a {
+            color: var(--muted);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        nav a:not(.cta)::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+        
+        nav a:not(.cta):hover {
+            color: var(--accent);
+        }
+        
+        nav a:not(.cta):hover::after {
+            width: 100%;
+        }
+        
+        .cta {
+            background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+            padding: 12px 24px;
+            border-radius: 10px;
+            color: var(--darker) !important;
+            font-weight: 700;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(212, 175, 55, 0.4);
+        }
+        
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+        
+        .mobile-menu span {
+            width: 28px;
+            height: 3px;
+            background: var(--accent);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+        
+        .mobile-nav {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: rgba(6, 9, 17, 0.95);
+            padding: 20px;
+            flex-direction: column;
+            gap: 20px;
+            border-top: 1px solid var(--border);
+        }
+        
+        .mobile-nav a {
+            color: var(--muted);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            text-align: center;
+            padding: 10px;
+        }
+        
+        .mobile-nav a:hover {
+            color: var(--accent);
+        }
+        
+        .mobile-nav.active {
+            display: flex;
+        }
+        /* Hero Section */
+        
+        .hero {
+            padding: 100px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .hero-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(36px, 5vw, 58px);
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 24px;
+            background: linear-gradient(135deg, #ffffff 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-text p {
+            font-size: 18px;
+            color: var(--muted);
+            margin-bottom: 32px;
+            line-height: 1.8;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 14px 32px;
+            border-radius: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 16px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+            color: var(--darker);
+            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(212, 175, 55, 0.4);
+        }
+        
+        .btn-secondary {
+            background: var(--card);
+            color: var(--light);
+            border: 1px solid var(--border);
+            backdrop-filter: blur(10px);
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(212, 175, 55, 0.1);
+            border-color: var(--accent);
+        }
+        
+        .hero-card {
+            background: var(--card);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 32px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            transition: transform 0.4s ease;
+        }
+        
+        .hero-card:hover {
+            transform: translateY(-8px);
+        }
+        
+        .hero-card h3 {
+            font-size: 24px;
+            margin-bottom: 24px;
+            color: var(--accent);
+            font-weight: 700;
+        }
+        
+        .contact-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .contact-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .contact-item strong {
+            display: block;
+            color: var(--muted);
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+        
+        .contact-item a,
+        .contact-item span {
+            color: var(--light);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-item a:hover {
+            color: var(--accent);
+        }
+        /* Services Section */
+        
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(32px, 4vw, 48px);
+            margin-bottom: 16px;
+            color: var(--light);
+        }
+        
+        .section-header p {
+            font-size: 18px;
+            color: var(--muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 28px;
+        }
+        
+        .service-card {
+            background: var(--card);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 36px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent), transparent);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent);
+            box-shadow: 0 12px 40px rgba(212, 175, 55, 0.15);
+        }
+        
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(212, 175, 55, 0.05));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin-bottom: 24px;
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover .service-icon {
+            transform: scale(1.1);
+        }
+        
+        .service-card h3 {
+            font-size: 24px;
+            margin-bottom: 16px;
+            color: var(--light);
+            font-weight: 700;
+        }
+        
+        .service-card p {
+            color: var(--muted);
+            line-height: 1.7;
+        }
+        /* About Section */
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .about-image {
+            position: relative;
+            border-radius: var(--radius);
+            overflow: hidden;
+        }
+        
+        .about-image::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), transparent);
+            z-index: 1;
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .about-text h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            margin-bottom: 24px;
+            color: var(--light);
+        }
+        
+        .about-text p {
+            color: var(--muted);
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-top: 40px;
+        }
+        
+        .stat {
+            text-align: center;
+            padding: 24px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease;
+        }
+        
+        .stat:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stat-number {
+            font-size: 40px;
+            font-weight: 800;
+            color: var(--accent);
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        .stat-label {
+            color: var(--muted);
+            font-size: 14px;
+            font-weight: 600;
+        }
+        /* Contact Section */
+        
+        .contact-section {
+            background: var(--card);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 60px;
+            text-align: center;
+            margin: 0 20px;
+        }
+        
+        .contact-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: var(--light);
+        }
+        
+        .contact-section p {
+            font-size: 18px;
+            color: var(--muted);
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .contact-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+        
+        .contact-method {
+            padding: 24px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-method:hover {
+            background: rgba(212, 175, 55, 0.05);
+            transform: translateY(-5px);
+        }
+        
+        .contact-method-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(212, 175, 55, 0.05));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin: 0 auto 16px;
+        }
+        
+        .contact-method h4 {
+            font-size: 16px;
+            color: var(--muted);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+        
+        .contact-method a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-method a:hover {
+            color: var(--accent);
+        }
+        /* Footer */
+        
+        footer {
+            padding: 60px 0 32px;
+            border-top: 1px solid var(--border);
+            margin-top: 80px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-about h3 {
+            font-size: 24px;
+            margin-bottom: 16px;
+            color: var(--accent);
+        }
+        
+        .footer-about p {
+            color: var(--muted);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 12px;
+        }
+        
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--muted);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background: var(--accent);
+            color: var(--darker);
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+        
+        .footer-links h4 {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: var(--light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: var(--muted);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+        
+        .footer-bottom {
+            padding-top: 32px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        
+        .footer-bottom p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+        /* Animations */
+        
+        @keyframes pulse {
+            0%,
+            100% {
+                opacity: 0.5;
+            }
+            50% {
+                opacity: 0.8;
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        .fade-in {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+        
+        .fade-in-left {
+            animation: fadeInLeft 0.6s ease-out forwards;
+        }
+        /* Responsive */
+        
+        @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+            nav {
+                display: none;
+            }
+            .mobile-menu {
+                display: flex;
+            }
+            .hero {
+                padding: 60px 0 40px;
+            }
+            .section {
+                padding: 60px 0;
+            }
+            .contact-section {
+                padding: 40px 24px;
+            }
+            .stats {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-pattern"></div>
+
+    <header id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="brand">
+                    <div class="logo">
+                        <img src="https://media.licdn.com/dms/image/v2/D5603AQENqvpySQgKKQ/profile-displayphoto-scale_200_200/B56Zmlg2yxJ4Ac-/0/1759418486174?e=1762387200&v=beta&t=1BBr18h0FnOlLEuy74zgsc7NNDEI2vOeoqNUk-IcrxY" alt="Advocate Sahil Rokade">
+                    </div>
+                    <div class="brand-text">
+                        <h1>Adv. Sahil Rokade</h1>
+                        <p>Advocate • Mumbai High Court</p>
+                    </div>
+                </div>
+                <nav>
+                    <a href="#services">Services</a>
+                    <a href="#about">About</a>
+                    <a href="#contact" class="cta">Contact</a>
+                </nav>
+                <div class="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="mobile-nav">
+                    <a href="#services">Services</a>
+                    <a href="#about">About</a>
+                    <a href="#contact" class="cta">Contact</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text fade-in">
+                        <h2>Professional Legal Excellence in Mumbai</h2>
+                        <p>With over two years of dedicated experience, Adv. Sahil Rokade provides expert legal representation across civil, criminal, and corporate matters. Committed to delivering justice through integrity, precision, and unwavering client
+                            advocacy.</p>
+                        <div class="hero-buttons">
+                            <a href="tel:8097097497" class="btn btn-primary">
+                                <span>📞</span> Call Now
+                            </a>
+                            <a href="mailto:sahilrokade2406@gmail.com" class="btn btn-secondary">
+                                <span>✉️</span> Send Email
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-card fade-in">
+                        <h3>Contact Information</h3>
+                        <div class="contact-item">
+                            <strong>Phone</strong>
+                            <a href="tel:8097097497">+91 8097097497</a><br>
+                            <a href="tel:9967539498">+91 9967539498</a>
+                        </div>
+                        <div class="contact-item">
+                            <strong>Email</strong>
+                            <a href="mailto:sahilrokade2406@gmail.com">sahilrokade2406@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <strong>Office Address</strong>
+                            <a href="https://maps.google.com/?q=Parshuram+Wadi,+05,+Dada+Saheb+Gaikwad+Rd,+Siddharth+Nagar,+Kalyan,+Mumbai,+Maharashtra+421306" target="_blank">
+                                Parshuram Wadi, 05, Dada Saheb Gaikwad Rd, Siddharth Nagar, Kalyan, Mumbai, Maharashtra 421306
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="section">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2>Areas of Practice</h2>
+                    <p>Comprehensive legal services tailored to your unique needs</p>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card fade-in">
+                        <div class="service-icon">🏛️</div>
+                        <h3>Civil Law</h3>
+                        <p>Expert handling of property disputes, family matters, contractual conflicts, and civil litigation. We provide strategic counsel to protect your rights and interests with precision and care.</p>
+                    </div>
+                    <div class="service-card fade-in">
+                        <div class="service-icon">⚖️</div>
+                        <h3>Criminal Law</h3>
+                        <p>Strong representation in criminal defense, bail applications, and procedural matters. Dedicated to safeguarding your freedom and ensuring fair treatment in Mumbai courts.</p>
+                    </div>
+                    <div class="service-card fade-in">
+                        <div class="service-icon">💼</div>
+                        <h3>Corporate Law</h3>
+                        <p>Legal guidance for businesses, startups, and corporate entities. From compliance and contracts to advisory services, we help your business navigate legal complexities.</p>
+                    </div>
+                    <div class="service-card fade-in">
+                        <div class="service-icon">👨‍👩‍👧</div>
+                        <h3>Family Law</h3>
+                        <p>Sensitive and compassionate representation in divorce, child custody, maintenance, and other family matters. We prioritize your family's well-being throughout the legal process.</p>
+                    </div>
+                    <div class="service-card fade-in">
+                        <div class="service-icon">🏢</div>
+                        <h3>Real Estate Law</h3>
+                        <p>Comprehensive legal support for property transactions, title verification, land disputes, and real estate documentation. Protecting your property investments with diligence.</p>
+                    </div>
+                    <div class="service-card fade-in">
+                        <div class="service-icon">📋</div>
+                        <h3>Legal Consultation</h3>
+                        <p>Personalized legal advice and strategic planning for complex legal matters. Get clarity on your legal position and the best path forward for your case.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text fade-in">
+                        <h3>About Adv. Sahil Rokade</h3>
+                        <p>Adv. Sahil Rokade is a dedicated legal professional practicing at the Mumbai High Court, bringing over two years of experience in delivering exceptional legal services. His practice is built on the pillars of integrity, professionalism,
+                            and client-centered advocacy.</p>
+                        <p>With a deep understanding of civil, criminal, and corporate law, he has successfully represented numerous clients across diverse legal matters. His approach combines thorough legal research, strategic thinking, and compassionate
+                            client care to achieve the best possible outcomes.</p>
+                        <p>Committed to making legal services accessible and transparent, Adv. Rokade believes in empowering clients through clear communication and honest counsel. He stays current with evolving legal frameworks to provide modern, effective
+                            legal solutions.</p>
+                        <div class="stats">
+                            <div class="stat fade-in">
+                                <span class="stat-number">2+</span>
+                                <span class="stat-label">Years Experience</span>
+                            </div>
+                            <div class="stat fade-in">
+                                <span class="stat-number">100+</span>
+                                <span class="stat-label">Cases Handled</span>
+                            </div>
+                            <div class="stat fade-in">
+                                <span class="stat-number">98%</span>
+                                <span class="stat-label">Client Satisfaction</span>
+                            </div>
+                            <div class="stat fade-in">
+                                <span class="stat-number">24/7</span>
+                                <span class="stat-label">Availability</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image fade-in-left">
+                        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800" alt="Legal Services">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section fade-in">
+            <div class="container">
+                <h2>Get in Touch</h2>
+                <p>Reach out today for expert legal advice and representation. We're here to assist you with all your legal needs.</p>
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <div class="contact-method-icon">📞</div>
+                        <h4>Phone</h4>
+                        <a href="tel:8097097497">+91 8097097497</a><br>
+                        <a href="tel:9967539498">+91 9967539498</a>
+                    </div>
+                    <div class="contact-method">
+                        <div class="contact-method-icon">✉️</div>
+                        <h4>Email</h4>
+                        <a href="mailto:sahilrokade2406@gmail.com">sahilrokade2406@gmail.com</a>
+                    </div>
+                    <div class="contact-method">
+                        <div class="contact-method-icon">📍</div>
+                        <h4>Office</h4>
+                        <a href="https://maps.google.com/?q=Parshuram+Wadi,+05,+Dada+Saheb+Gaikwad+Rd,+Siddharth+Nagar,+Kalyan,+Mumbai,+Maharashtra+421306" target="_blank">
+                            Parshuram Wadi, 05, Dada Saheb Gaikwad Rd, Siddharth Nagar, Kalyan, Mumbai, Maharashtra 421306
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>Adv. Sahil Rokade</h3>
+                    <p>Providing trusted legal services in Mumbai with a focus on integrity, professionalism, and client satisfaction. Contact us for expert guidance in civil, criminal, and corporate law matters.</p>
+                    <div class="social-links">
+                        <a href="https://linkedin.com" class="social-link">🔗</a>
+                        <a href="https://twitter.com" class="social-link">🐦</a>
+                        <a href="https://facebook.com" class="social-link">📘</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><a href="tel:8097097497">+91 8097097497</a></li>
+                        <li><a href="tel:9967539498">+91 9967539498</a></li>
+                        <li><a href="mailto:sahilrokade2406@gmail.com">sahilrokade2406@gmail.com</a></li>
+                        <li><a href="https://maps.google.com/?q=Parshuram+Wadi,+05,+Dada+Saheb+Gaikwad+Rd,+Siddharth+Nagar,+Kalyan,+Mumbai,+Maharashtra+421306" target="_blank">Parshuram Wadi, Mumbai</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Adv. Sahil Rokade. All rights reserved.</p>
+                <p>Designed with care for legal excellence</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            header.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Mobile menu toggle
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const mobileNav = document.querySelector('.mobile-nav');
+        mobileMenu.addEventListener('click', () => {
+            mobileNav.classList.toggle('active');
+            mobileMenu.classList.toggle('open');
+            if (mobileMenu.classList.contains('open')) {
+                mobileMenu.children[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                mobileMenu.children[1].style.opacity = '0';
+                mobileMenu.children[2].style.transform = 'rotate(-45deg) translate(8px, -8px)';
+            } else {
+                mobileMenu.children[0].style.transform = 'none';
+                mobileMenu.children[1].style.opacity = '1';
+                mobileMenu.children[2].style.transform = 'none';
+            }
+        });
+
+        // Intersection Observer for fade-in animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('.fade-in, .fade-in-left').forEach(element => {
+            observer.observe(element);
+        });
+    </script>
+</body>
+
+</html>
