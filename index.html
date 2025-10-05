@@ -990,11 +990,19 @@
                 <div class="footer-about">
                     <h3>Adv. Sahil Rokade</h3>
                     <p>Providing trusted legal services in Mumbai with a focus on integrity, professionalism, and client satisfaction. Contact us for expert guidance in civil, criminal, and corporate law matters.</p>
+
+
+
                     <div class="social-links">
-                        <a href="https://linkedin.com" class="social-link">🔗</a>
-                        <a href="https://twitter.com" class="social-link">🐦</a>
-                        <a href="https://facebook.com" class="social-link">📘</a>
+                        <a href="https://www.instagram.com/adv_sahil_rokade1312/" target="_blank" class="social-link">
+                           Insta
+                        </a>
+                        <a href="https://www.linkedin.com/in/sahil-rokade-7bb872382/" target="_blank" class="social-link">
+                           lkdin
+                        </a>
                     </div>
+
+
                 </div>
                 <div class="footer-links">
                     <h4>Quick Links</h4>
@@ -1015,13 +1023,17 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Adv. Sahil Rokade. All rights reserved.</p>
+                <p>&copy; <span id="year"></span> Adv. Sahil Rokade. All rights reserved.</p>
                 <p>Designed with care for legal excellence</p>
             </div>
+
+
+
         </div>
     </footer>
 
     <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
         // Header scroll effect
         window.addEventListener('scroll', () => {
             const header = document.getElementById('header');
